@@ -8,13 +8,14 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String args[]) {
+        Display printer = new Display();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("What is your name?");
+        printer.printToScreen("What is your name?");
         String n = scanner.nextLine();
         NameCheck nameCheck = new NameCheck();
         if (nameCheck.check(n))
-            System.out.println("Greetings! Enter!");
+            printer.printToScreen("Greetings! Enter!");
         else
-            System.out.println("No, no, no");
+            printer.printToScreen("No, no, no");
     }
 }

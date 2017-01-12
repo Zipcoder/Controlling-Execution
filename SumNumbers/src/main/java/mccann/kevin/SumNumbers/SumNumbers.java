@@ -9,11 +9,10 @@ public class SumNumbers {
 
     public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Input a number!");
+        Display printer = new Display();
+        printer.printLine("Input a number!");
         int n = scanner.nextInt();
-        int total = 0;
-        for(int i = 0; i <= n; i++)
-            total += i;
-        System.out.println(total);
+        DoMath mather = new DoMath();
+        printer.printLine(mather.sum(n));
     }
 }
