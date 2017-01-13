@@ -8,7 +8,7 @@ public class CalculatorEngine {
 
     public int getSum(int input){
         if (input >= 0){
-            for (int counter = 0; counter < input; counter++){
+            for (int counter = 0; counter <= input; counter++){
                 output += counter;
             }
         } else {
