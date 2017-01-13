@@ -6,7 +6,16 @@ package mozeik.gerrod;
 public class CELab2 {
 
     public static void main(String[] args) {
-        Prompter getUserName = new Prompter();
+        Prompter prompter = new Prompter();
+        String userName = prompter.getUserName();
+        NameChecker nameChecker = new NameChecker();
+        Boolean result = nameChecker.checkThisName(userName);
+        if (result) {
+            System.out.println("Hello " + userName);
+        }
+            else {
+                System.out.println("Go away");
+            }
+        }
 
     }
-}
