@@ -1,11 +1,13 @@
 package ControllingExecution;
 
+import java.util.Scanner;
+
 /**
  * Created by randallcrame on 1/12/17.
  */
 public class AliceAndBobGreeting {
-    private boolean areYouBobOrAlice( String userName){
-        if (userName.toLowerCase().equals("bob")) {
+    public boolean areYouBobOrAlice( String userName){
+        if (userName.toLowerCase().equals("bob") || userName.toLowerCase().equals("alice")) {
             return true;
         }else {
              return false;
@@ -14,13 +16,17 @@ public class AliceAndBobGreeting {
     }
     private void onlyGreetsBobOrAlice(boolean checker, String namePrint){
         if (checker)
-            System.out.println(namePrint);
+            System.out.println("Why hello, " + namePrint);
     }
 
     public static void main (String[] args){
-        String userName = "Bob";
+        Scanner input = new Scanner(System.in);
         AliceAndBobGreeting myName = new AliceAndBobGreeting();
-        myName.onlyGreetsBobOrAlice(myName.areYouBobOrAlice(userName), userName);
+        String usersName;
+
+        System.out.print ("Please Enter your Name: ");
+        usersName = input.next();
+        myName.onlyGreetsBobOrAlice(myName.areYouBobOrAlice(usersName), usersName);
     }
 
 }
