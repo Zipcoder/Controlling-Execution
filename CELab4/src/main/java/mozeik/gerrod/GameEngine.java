@@ -20,14 +20,14 @@ public class GameEngine {
 
         Comparator comparator = new Comparator();
         winConditionMet = comparator.isUserGuessSameAsSecretNumber(userNumber, secretNumber);
-        System.out.println(winConditionMet);
 
-        while (winConditionMet == false){
-            prompter.sendUserLost();
+        while (!winConditionMet){
+            userNumber = prompter.getNextUserGuess();
             winConditionMet = comparator.isUserGuessSameAsSecretNumber(userNumber, secretNumber);
-            prompter.sendUserWon();
-            return;
         }
+
+        numberOfGuesses = comparator.getNumberOfGuesses();
+        prompter.sendUserWon(numberOfGuesses);
 
     }
 }

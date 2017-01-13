@@ -10,20 +10,34 @@ public class Prompter {
     public int getUserGuess() {
         int userGuess;
         Scanner scanner = new Scanner(System.in);
-        System.out.println("What do you think the number is?");
+        System.out.println("Please guess a number between 1 and 100.");
         userGuess = scanner.nextInt();
-        System.out.println("You guessed: " + userGuess);
+        System.out.print("You guessed: " + userGuess + ". ");
         return userGuess;
     }
 
-    public void sendUserWon() {
-        System.out.println("You win! It took you tries.");
+    public void sendUserWon(int numberOfGuesses) {
+        System.out.println("You win! It took you " + numberOfGuesses + " tries.");
     }
 
     public void sendUserLost() {
-        int userGuess;
-        Scanner scanner = new Scanner(System.in);
         System.out.println("You lost! Guess again.");
-        userGuess = scanner.nextInt();
+    }
+
+    public int getNextUserGuess() {
+        System.out.println("You lost! Guess again.");
+        Scanner scanner = new Scanner(System.in);
+        int userGuess = scanner.nextInt();
+        System.out.print("You guessed: " + userGuess + ". ");
+        return userGuess;
+    }
+
+    public void userGuessedTooLow() {
+        System.out.print("Your guess was too low. ");
+    }
+
+    public void userGuessedTooHigh() {
+        System.out.print("Your guess was too high. ");
     }
 }
+
