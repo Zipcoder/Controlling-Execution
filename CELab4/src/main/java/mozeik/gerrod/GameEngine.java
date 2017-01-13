@@ -2,6 +2,10 @@ package mozeik.gerrod;
 
 /**
  * Created by gerrodmozeik on 1/13/17.
+ * GameEngine calls SecretNumberGenerator to create the secret number.
+ * It then uses Prompter to ask the user for their guess.
+ * Comparator compares the user's guess to the secret number and returns the result of the comparison to Prompter
+ * to display the result.
  */
 public class GameEngine {
 
