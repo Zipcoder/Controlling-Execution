@@ -6,11 +6,13 @@ import java.util.Scanner;
  */
 public class LabControllingExecution1 {
 
-
-
     public static void main(String[] args) {
+        Prompter userPrompt = new Prompter();
+        IntegerCalculater calculater = new IntegerCalculater();
 
-
+        int userNumber = userPrompt.prompt();
+        int output = calculater.calculate(userNumber);
+        System.out.println(output);
     }
 
 }
