@@ -2,6 +2,7 @@ package mattern.william;
 
 /**
  * Created by williammattern on 1/13/17.
+ * Created in collaboration with Gerrod Mozeik.
  */
 public class GameEngine {
     int secretNumber;
