@@ -8,5 +8,16 @@ public class GuessComparator {
     int currentGuess;
     int secretNumber;
 
+     public Boolean guessComparison(int currentGuess){
+         this.currentGuess = currentGuess;
+         if (currentGuess == secretNumber){
+             return true;
+         } else {
+             return false;
+         }
+     }
 
+     public void setSecretNumber(int secretNumber){
+         this.secretNumber = secretNumber;
+     }
 }

@@ -4,7 +4,7 @@ package mattern.william;
  * Created by williammattern on 1/12/17.
  */
 public class GuessCounter {
-    int countOfGuesses = 0;
+    int countOfGuesses = 1;
 
     public void addOneToCountOfGuesses(){
         countOfGuesses++;
