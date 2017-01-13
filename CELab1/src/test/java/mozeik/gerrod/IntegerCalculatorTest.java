@@ -13,7 +13,7 @@ public class IntegerCalculatorTest {
 
     public void calculatorTest5() {
         IntegerCalculator calculator = new IntegerCalculator();
-        int expected = 10;
+        int expected = 15;
         int actual = calculator.calculate(5);
         assertEquals("I expect the sum to be 15.", expected, actual);
     }
