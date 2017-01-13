@@ -1,5 +1,6 @@
 package armstrong.alexandra;
 
+import java.lang.reflect.Array;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -18,10 +19,6 @@ public class TooLargeTooSmall {
         guessCount = 0;
     }
 
-    /*public boolean isRepeatGuess(int guess){
-        return guessed.contains(guess);
-    }*/
-
     public boolean isCorrect (int guess) {
         return numberToBeGuessed == guess;
     }
@@ -30,7 +27,7 @@ public class TooLargeTooSmall {
         guessCount++;
     }
 
-    public String highOrLow(int guess) {
+    public String highOrLow() {
         if (guess > numberToBeGuessed) {
             return "Too Large";
         } else if (guess < numberToBeGuessed) {
@@ -40,8 +37,35 @@ public class TooLargeTooSmall {
         }
     }
 
-    public void gameController(int guess){
+    public void guessIntake(){
+        System.out.println("I'm sorry, try again");
+        setGuess(InputHelper.intScanner());
+    }
 
+    public void setGuess(int guess){
+        this.guess = guess;
+    }
+
+    public void addToSet(){
+        guessed.add(guess);
+    }
+
+    public int getGuessCount(){
+        return guessCount;
+    }
+
+    public int getGuess() {
+        return guess;
+    }
+
+    public void displayGuessed(){
+        for(Integer i : guessed){
+            System.out.print(i + " ");
+        }
+    }
+
+    public int getNumberToBeGuessed(){
+        return numberToBeGuessed;
     }
 
 }

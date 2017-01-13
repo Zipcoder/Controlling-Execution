@@ -5,7 +5,7 @@ package armstrong.alexandra;
 public class SumOrProduct {
 
     public static void main(String[] args){
-        operatorIntake();
+        sumOrProduct(operatorIntake());
     }
 
     public static int numberIntake(){
@@ -14,10 +14,10 @@ public class SumOrProduct {
         return intake;
     }
 
-    public static void operatorIntake(){
+    public static String operatorIntake(){
         System.out.print("Please type the operator: ");
-        String operator = InputHelper.stringScanner();
-        sumOrProduct(operator);
+        return InputHelper.stringScanner();
+
     }
 
     public static void sumOrProduct(String operator){

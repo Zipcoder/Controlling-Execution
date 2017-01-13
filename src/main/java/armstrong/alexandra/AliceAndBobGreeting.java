@@ -6,9 +6,14 @@ package armstrong.alexandra;
 public class AliceAndBobGreeting {
     public static void main(String[] args){
         String name = whatIsYourName();
-        areYouBob(name);
-        areYouAlice(name);
-        //notBoborAlice(name);
+        if (areYouBob(name)) {
+            System.out.println("Hello Bob");
+        } else if (areYouAlice(name)){
+            System.out.println("Hello Alice");
+        } else {
+            System.out.println("... Rude");
+        }
+
     }
 
     public static String whatIsYourName(){
@@ -17,27 +22,17 @@ public class AliceAndBobGreeting {
         return name;
     }
 
-    public static void areYouBob(String name) {
+    public static boolean areYouBob(String name) {
         if (name.equalsIgnoreCase("Bob")) {
-            greetingBob();
+            return true;
         }
+        return false;
     }
 
-    public static void areYouAlice(String name){
+    public static boolean areYouAlice(String name){
         if (name.equalsIgnoreCase("Alice")){
-            greetingAlice();
+            return true;
         }
-    }
-
-    private static void greetingBob() {
-        System.out.println("Hello Bob");
-    }
-
-    private static void greetingAlice(){
-        System.out.println("Hello Alice");
-    }
-
-    public static void notBoborAlice(){
-        System.out.println("... Rude.");
+        return false;
     }
 }

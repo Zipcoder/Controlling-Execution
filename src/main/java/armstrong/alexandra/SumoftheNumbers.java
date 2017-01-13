@@ -5,11 +5,7 @@ package armstrong.alexandra;
  */
 public class SumoftheNumbers {
     public static void main(String[] args){
-        printSum(sumNumbers(askForInput()));
-    }
-
-    public static void printSum(int total) {
-        System.out.println("The sum is " + total + ".");
+        System.out.println("The sum is " + sumNumbers(askForInput()) + ".");
     }
 
     public static int sumNumbers(int input) {

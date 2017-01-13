@@ -1,5 +1,6 @@
 package armstrong.alexandra;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -9,12 +10,13 @@ import static org.junit.Assert.assertEquals;
  */
 public class SumoftheNumbersTest {
 
-    /*@Test
+    @Ignore //scanner input
+    @Test
     public void askForInputTest() {
         int expected = 5;
         int actual = SumoftheNumbers.askForInput();
         assertEquals(expected, actual);
-    }*/ //Can't test scanner input
+    }
 
     @Test
     public void sumNumbersTest(){
