@@ -6,17 +6,35 @@ import com.sun.org.apache.xpath.internal.operations.Bool;
  * Created by williammattern on 1/13/17.
  */
 public class Comparator {
-    int userNumber;
     int secretNumber;
-    int numberOfGuesses;
-    Boolean isSecretNumberSameAsUserGuess;
+    int currentUserNumber;
+    int previousUserNumber;
+    int numberOfGuesses = 1;
 
     public Boolean getIsUserNumberSameAsSecretNumber(int userNumber, int secretNumber){
-        if (userNumber == secretNumber){
+        Prompter prompter = new Prompter();
+        this.currentUserNumber = userNumber;
+        this.secretNumber = secretNumber;
+        if (currentUserNumber == secretNumber){
             return true;
         } else {
-            numberOfGuesses++;
-            return false;
+            if ((currentUserNumber == previousUserNumber) && (currentUserNumber < secretNumber)){
+                prompter.sendUserGuessedTooLow();
+                return false;
+            } else if ((currentUserNumber == previousUserNumber) && (currentUserNumber > secretNumber)) {
+                prompter.sendUserGuessedTooHigh();
+                return false;
+            } else if (currentUserNumber < secretNumber){
+                numberOfGuesses++;
+                previousUserNumber = currentUserNumber;
+                prompter.sendUserGuessedTooLow();
+                return false;
+            } else {
+                numberOfGuesses++;
+                previousUserNumber = currentUserNumber;
+                prompter.sendUserGuessedTooHigh();
+                return false;
+            }
         }
     }
 

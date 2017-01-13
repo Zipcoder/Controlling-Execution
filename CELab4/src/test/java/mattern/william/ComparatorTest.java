@@ -24,5 +24,4 @@ public class ComparatorTest {
         boolean expected = false;
         assertEquals("I expect the user guessed false", expected, actual);
     }
-
 }

@@ -18,15 +18,12 @@ public class GameEngine {
 
         Comparator comparator = new Comparator();
         winConditionMet = comparator.getIsUserNumberSameAsSecretNumber(userNumber,secretNumber);
-        System.out.println(winConditionMet);
 
-        while (winConditionMet == false){
-            prompter.sendUserLost();
+        while (!winConditionMet){
+            userNumber = prompter.getNextUserGuess();
             winConditionMet = comparator.getIsUserNumberSameAsSecretNumber(userNumber,secretNumber);
-            prompter.sendUserWon();
-            return;
         }
-
-
+        numberOfGuesses = comparator.getNumberOfGuesses();
+        prompter.sendUserWon(numberOfGuesses);
     }
 }

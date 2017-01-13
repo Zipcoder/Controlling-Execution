@@ -11,7 +11,6 @@ public class SecretNumberGenerator {
     public int getSecretNumber(){
         Random random = new Random();
         secretNumber = random.nextInt(99) + 1;
-        System.out.println(secretNumber);
         return secretNumber;
     }
 }
