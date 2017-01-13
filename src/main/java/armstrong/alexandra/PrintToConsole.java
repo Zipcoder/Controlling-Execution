@@ -7,7 +7,7 @@ public class PrintToConsole {
     private String message;
 
     PrintToConsole(){}
-    PrintToConsole(String message){
+    public PrintToConsole(String message){
         this.message = message;
     }
 

@@ -1,7 +1,5 @@
 package armstrong.alexandra;
 
-import java.util.Scanner;
-
 /**
  * Created by alexandraarmstrong on 1/12/17.
  */
@@ -10,12 +8,12 @@ public class AliceAndBobGreeting {
         String name = whatIsYourName();
         areYouBob(name);
         areYouAlice(name);
+        //notBoborAlice(name);
     }
 
     public static String whatIsYourName(){
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Hello, what is your name?");
-        String name = scanner.nextLine();
+        String name = InputHelper.stringScanner();
         return name;
     }
 
@@ -37,7 +35,9 @@ public class AliceAndBobGreeting {
 
     private static void greetingAlice(){
         System.out.println("Hello Alice");
+    }
 
-
+    public static void notBoborAlice(){
+        System.out.println("... Rude.");
     }
 }

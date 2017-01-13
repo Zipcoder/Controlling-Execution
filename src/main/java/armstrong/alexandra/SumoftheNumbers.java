@@ -1,7 +1,5 @@
 package armstrong.alexandra;
 
-import java.util.Scanner;
-
 /**
  * Created by alexandraarmstrong on 1/12/17.
  */
@@ -23,9 +21,8 @@ public class SumoftheNumbers {
     }
 
     public static int askForInput() {
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Please enter a number: ");
-        int input = scanner.nextInt();
+        int input = InputHelper.intScanner();
         return input;
     }
 }

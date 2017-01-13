@@ -1,25 +1,23 @@
-import java.util.Scanner;
+package armstrong.alexandra;
 /**
  * Created by alexandraarmstrong on 1/12/17.
  */
 public class SumOrProduct {
 
-    static Scanner scanner = new Scanner(System.in);
-
     public static void main(String[] args){
-        sumOrProduct(operatorIntake());
+        operatorIntake();
     }
 
     public static int numberIntake(){
         System.out.print("Please type an integer: ");
-        int intake = scanner.nextInt();
+        int intake = InputHelper.intScanner();
         return intake;
     }
 
-    public static String operatorIntake(){
+    public static void operatorIntake(){
         System.out.print("Please type the operator: ");
-        String operator = scanner.nextLine();
-        return operator;
+        String operator = InputHelper.stringScanner();
+        sumOrProduct(operator);
     }
 
     public static void sumOrProduct(String operator){
@@ -31,8 +29,7 @@ public class SumOrProduct {
         }
         else {
             System.out.println("Operator must be sum or product");
-            operator = scanner.nextLine();
-            sumOrProduct(operator);
+            operatorIntake();
         }
     }
 
