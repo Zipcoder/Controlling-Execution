@@ -8,7 +8,7 @@ public class IntegerCalculater {
 
     public int calculate(int input) {
        if (input >= 0){
-           for (int counter = 0; counter < input; counter++){
+           for (int counter = 0; counter <= input; counter++){
                output += counter;
            }
        } else {
