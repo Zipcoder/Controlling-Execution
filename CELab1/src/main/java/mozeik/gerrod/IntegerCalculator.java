@@ -5,25 +5,21 @@ package mozeik.gerrod;
  */
 public class IntegerCalculator {
 
-    int input;
     int output;
+    int counter;
 
-    public int calculate(int i) {
-
-        if (input > 0) {
-            for (i = 1; i <= input; i++) {
-                output += 1;
+    public int calculate(int input) {
+        if (input >= 0) {
+            for (int counter = 0; counter < input; counter++) {
+                output += counter;
             }
-
-        } else if (input < 0) {
-            for (i = 0; i <= input; i--) {
-                output -= i;
-            }
+            return output;
         } else {
-            output = 0;
+            for (int count = input; count < 2; count++) {
+                output += count;
+            }
+        return output;
         }
-    return output;
     }
 }
-
 

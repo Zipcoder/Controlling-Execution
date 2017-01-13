@@ -13,9 +13,18 @@ public class IntegerCalculatorTest {
 
     public void calculatorTest5() {
         IntegerCalculator calculator = new IntegerCalculator();
-        int expected = 5;
+        int expected = 10;
         int actual = calculator.calculate(5);
         assertEquals("I expect the sum to be 15.", expected, actual);
+    }
+
+    @Test
+
+    public void integerCalcTestNeg5() {
+        IntegerCalculator calculator = new IntegerCalculator();
+        int expected = -9;
+        int actual = calculator.calculate(-4);
+        assertEquals("I expect the sum to be -9.", expected, actual);
     }
 
 }
