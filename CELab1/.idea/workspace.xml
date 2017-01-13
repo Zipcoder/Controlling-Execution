@@ -27,7 +27,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CELab1.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CELab1.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/mozeik/gerrod/CELab1.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -47,7 +47,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IntegerCalculatorTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IntegerCalculatorTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/mozeik/gerrod/IntegerCalculatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -780,7 +780,7 @@
       <option name="presentableId" value="Default" />
       <updated>1484257824040</updated>
       <workItem from="1484257827691" duration="9711000" />
-      <workItem from="1484271522151" duration="2745000" />
+      <workItem from="1484271522151" duration="2977000" />
     </task>
     <servers />
   </component>
@@ -817,7 +817,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12456000" />
+    <option name="totallyTimeSpent" value="12688000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="917" height="989" extended-state="0" />
@@ -931,14 +931,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mozeik/gerrod/CELab1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mozeik/gerrod/IntegerCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -954,6 +946,14 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mozeik/gerrod/CELab1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
