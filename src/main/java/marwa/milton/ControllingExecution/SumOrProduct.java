@@ -6,22 +6,19 @@ import java.util.Scanner;
  * Created by mkulima on 1/13/17.
  */
 public class SumOrProduct {
+    Scanner scan  = new Scanner(System.in);
 
     public static void main(String[] args) {
         SumOrProduct thisInstanceOfSumOrProduct = new SumOrProduct();
         // get user input
-        System.out.println("Enter your number: ");
-        Scanner scan  = new Scanner(System.in);
-        double usersNum = scan.nextDouble();
-
-        System.out.println("Choose the Operation Type: \n Enter 1 for Sums \n Enter 2 for the Product");
-        int operationType = scan.nextInt();
-        scan.close();
+        int usersNum = thisInstanceOfSumOrProduct.getUserInt();
+        // get user operation
+        int operationType = thisInstanceOfSumOrProduct.getUserOperation();
 
         // perform action with user input and print result to screen
-        if(operationType == 1) System.out.println(thisInstanceOfSumOrProduct.sumOperation((int) usersNum));
-        if(operationType == 2) System.out.println(thisInstanceOfSumOrProduct.productOperation((int) usersNum));
-
+        if(operationType == 1) System.out.println(thisInstanceOfSumOrProduct.sumOperation(usersNum));
+        if(operationType == 2) System.out.println(thisInstanceOfSumOrProduct.productOperation(usersNum));
+        thisInstanceOfSumOrProduct.scan.close();
     } // end main _________________________________________________________________________________________________
 
     // sum method
@@ -38,5 +35,18 @@ public class SumOrProduct {
         }
         return  product;
     } // end product method________________________________________________________________________________________
+
+    // get user input
+    public int getUserInt(){
+        System.out.println("Enter your number: ");
+        return this.scan.nextInt();
+    }
+
+    // get user operation
+    public int getUserOperation(){
+        System.out.println("Choose the Operation Type: \n Enter 1 for Sums \n Enter 2 for the Product");
+        return this.scan.nextInt();
+    }
+
 
 } //end class

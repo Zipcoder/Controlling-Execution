@@ -11,22 +11,27 @@ public class AliceAndBobGreeting {
     public static void main(String[] args) {
 
         AliceAndBobGreeting thisAliceAndBobGreeting = new AliceAndBobGreeting();
-        System.out.println("\n " + "Hello, " + thisAliceAndBobGreeting.filterUserInput());
+        String unFilteredName = thisAliceAndBobGreeting.getUserInput();
+        System.out.println("\n " + thisAliceAndBobGreeting.filterUserInput(unFilteredName));
 
         thisAliceAndBobGreeting.scan.close();
     } // end main
 
-    // get user input function
-    public String filterUserInput(){
+    // get user input
+    public String getUserInput(){
         System.out.println("Enter your name: ");
         String usersName = this.scan.nextLine();
+        return usersName;
+    }
+
+    // filter user input function
+    public String filterUserInput(String usersName){
         if(usersName.equalsIgnoreCase("alice") | usersName.equalsIgnoreCase("bob"))
-            return usersName.toLowerCase();
+            return "Hello, " + usersName + "!";
         else {
             return " ";
         }
     }
-
 
 
 } // end class
