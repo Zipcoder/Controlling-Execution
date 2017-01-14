@@ -15,10 +15,9 @@ public class TooLargeTooSmall {
     public int answer = createRandom.nextInt(10) + 1;
     public int currentGuess;
 
-     int getUserNumber(){
+     void getUserNumber(){
         System.out.print("Guess a number between 1 - 10: ");
         currentGuess = input.nextInt();
-        return currentGuess;
     }
 
     public void numberOfGuesses( int currentGuess, int previousGuess){
@@ -41,7 +40,6 @@ public class TooLargeTooSmall {
             this.checkGuess(currentGuess, answer);
             previousGuess = currentGuess;
             this.getUserNumber();
-            System.out.println(guessCounter);
         }
         this.numberOfGuesses(currentGuess, answer);
         System.out.println("You got the number in " + guessCounter + " tries!");
