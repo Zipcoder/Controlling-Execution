@@ -5,7 +5,7 @@ package battin.preston;
  */
 public class SumOfNumbers {
 
-    private int number;
+    protected int number;
 
     SumOfNumbers(int num){
 
