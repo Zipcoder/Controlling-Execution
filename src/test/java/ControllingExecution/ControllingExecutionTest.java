@@ -1,6 +1,5 @@
 package ControllingExecution;
 
-import org.junit.Before;
 import org.junit.Test;
 
 import static  org.junit.Assert.*;
@@ -17,40 +16,9 @@ public class ControllingExecutionTest {
     @B
  */
 
-    @Test
-    public void SumOfForLoopTest() {
-        SumOfForLoop n = new SumOfForLoop();
-        int expected = 55;
-        int actual = n.sumOfForLoop(10);
-        assertEquals(expected, actual);
-    }
 
 
-    @Test
-    public void SumLoopTest(){
-        SumOrProduct myNumber = new SumOrProduct();
-        int expected = 55;
-        int actual = myNumber.sumLoop(10);
-        assertEquals(expected, actual);
-    }
 
-    @Test
-    public void ProductLoopTest(){
-        SumOrProduct myNumber = new SumOrProduct();
-        int expected = 3628800;
-        int actual = myNumber.productLoop(10);
-        assertEquals(expected, actual);
-    }
-    @Test
-    public void DoWorkTestPass() {
-        SumOrProduct myNumber = new SumOrProduct();
-        myNumber.doWork(10, "Product");
-    }
-    @Test
-    public void DoWorkTestFail() {
-        SumOrProduct myNumber = new SumOrProduct();
-        myNumber.doWork(10, "Dime");
-    }
     @Test
     public void incrementGuessPass(){
         TooLargeTooSmall myNumber = new TooLargeTooSmall();
