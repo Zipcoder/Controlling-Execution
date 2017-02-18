@@ -1,14 +1,9 @@
-package ControllingExecutionTest;
+package ControllingExecution;
 
-import ControllingExecution.AliceAndBobGreeting;
-import ControllingExecution.SumOfForLoop;
-import ControllingExecution.SumOrProduct;
-import ControllingExecution.TooLargeTooSmall;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import java.util.*;
 
+import static  org.junit.Assert.*;
 
 /**
  * Created by randallcrame on 1/12/17.
@@ -27,30 +22,16 @@ public class ControllingExecutionTest {
         SumOfForLoop n = new SumOfForLoop();
         int expected = 55;
         int actual = n.sumOfForLoop(10);
-        Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
-    @Test
-    public void AreYouBoBorAliceTest(){
-        AliceAndBobGreeting userName = new AliceAndBobGreeting();
-        boolean expected = true;
-        boolean actual  = userName.areYouBobOrAlice("bob");
-        Assert.assertEquals(expected, actual);
-    }
 
-    @Test
-    public void AreYouBoBorAliceFailTest(){
-        AliceAndBobGreeting userName = new AliceAndBobGreeting();
-        boolean expected = false;
-        boolean actual  = userName.areYouBobOrAlice("Jim");
-        Assert.assertEquals(expected, actual);
-    }
     @Test
     public void SumLoopTest(){
         SumOrProduct myNumber = new SumOrProduct();
         int expected = 55;
         int actual = myNumber.sumLoop(10);
-        Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -58,7 +39,7 @@ public class ControllingExecutionTest {
         SumOrProduct myNumber = new SumOrProduct();
         int expected = 3628800;
         int actual = myNumber.productLoop(10);
-        Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
     @Test
     public void DoWorkTestPass() {
@@ -77,8 +58,7 @@ public class ControllingExecutionTest {
         int guessCounter = 0;
         int expected = 0;
         int actual = guessCounter;
-        System.out.println(guessCounter);
-        Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
    /* @Test
