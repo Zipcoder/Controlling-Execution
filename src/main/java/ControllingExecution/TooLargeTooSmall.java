@@ -10,23 +10,23 @@ public class TooLargeTooSmall {
     Scanner input = new Scanner(System.in);
     Random createRandom = new Random();
 
-    public int previousGuess = 0;
-    public int guessCounter = 1;
-    public int answer = createRandom.nextInt(10) + 1;
-    public int currentGuess;
+    private int previousGuess = 0;
+    private int guessCounter = 1;
+    private int answer = createRandom.nextInt(10) + 1;
+    private int currentGuess;
 
-     void getUserNumber(){
+     private void getUserNumber(){
         System.out.print("Guess a number between 1 - 10: ");
         currentGuess = input.nextInt();
     }
 
-    public void numberOfGuesses( int currentGuess, int previousGuess){
+    private void numberOfGuesses( int currentGuess, int previousGuess){
         if (currentGuess != previousGuess) {
             this.guessCounter++;
         }
     }
 
-    public void checkGuess (int currentGuess, int answer){
+    private void checkGuess (int currentGuess, int answer){
         if (currentGuess < answer)
             System.out.println("Your number " + currentGuess + " was too low");
         else
